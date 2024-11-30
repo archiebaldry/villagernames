@@ -8,6 +8,7 @@
 		"archiebaldry"
 	],
 	"contact": {
+		"homepage": "https://modrinth.com/project/villagernames",
 		"sources": "https://github.com/archiebaldry/villagernames"
 	},
 	"license": "MIT",
