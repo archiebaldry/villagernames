@@ -17,25 +17,12 @@
 	"entrypoints": {
 		"main": [
 			"archiebaldry.villagernames.VillagerNames"
-		],
-		"client": [
-			"archiebaldry.villagernames.VillagerNamesClient"
 		]
 	},
-	"mixins": [
-		"villagernames.mixins.json",
-		{
-			"config": "villagernames.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
