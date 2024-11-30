@@ -3,7 +3,7 @@
 	"id": "villagernames",
 	"version": "${version}",
 	"name": "Villager Names",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Assigns a random name to every villager.",
 	"authors": [
 		"archiebaldry"
 	],
@@ -11,7 +11,7 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "CC-BY-NC-4.0",
 	"icon": "assets/villagernames/icon.png",
 	"environment": "*",
 	"entrypoints": {
