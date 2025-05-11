@@ -16,6 +16,8 @@ public class VillagerNames implements ModInitializer {
 
 	private static final String[] NATO_NAMES = {"Alfa","Bravo","Charlie","Delta","Echo","Foxtrot","Golf","Hotel","India","Juliett","Kilo","Lima","Mike","November","Oscar","Papa","Quebec","Romeo","Sierra","Tango","Uniform","Victor","Whiskey","Xray","Yankee","Zulu"};
 
+	private static final String[] BONUS_NAMES = {"Bella", "Dean", "Eddie", "Garwin", "Gin", "Lili-Ella", "Lise", "Lyra", "Percy", "Rufus", "Sammy", "Saul", "Sul", "Theo", "Travis", "Troy"};
+
 	@Override
 	public void onInitialize() {
 		Random random = new Random();
@@ -23,7 +25,8 @@ public class VillagerNames implements ModInitializer {
 		String[] names = Stream.of(
 				MALE_NAMES,
 				FEMALE_NAMES,
-				NATO_NAMES
+				NATO_NAMES,
+				BONUS_NAMES
 		).flatMap(Stream::of).toArray(String[]::new);
 
 		ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> {
