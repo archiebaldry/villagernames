@@ -4,7 +4,9 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.entity.passive.MerchantEntity;
+import net.minecraft.registry.Registries;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 import java.util.Random;
 import java.util.stream.Stream;
@@ -31,7 +33,11 @@ public class VillagerNames implements ModInitializer {
 
 		ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> {
 			if (!(entity instanceof MerchantEntity)) {
-				return;
+				Identifier id = Registries.ENTITY_TYPE.getId(entity.getType());
+
+				if (!id.getNamespace().equals("guardvillagers") || !id.getPath().equals("guard")) {
+					return;
+				}
 			}
 
 			if (entity.hasCustomName()) {
